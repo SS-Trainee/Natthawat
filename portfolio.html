@@ -1,25 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <body>
   <div id="header">
     <div class="container"></div>
     <nav>
-        <img src="" alt="">
-        <ul>
-          <li><a href="#"> Home </a></li>
-          <li><a href="#"> Home </a></li>
-          <li><a href="#"> Home </a></li>
-          <li><a href="#"> Home </a></li>
-        </ul>
+      <ul id="sidemenu">
+        <li><a href="#"> Home </a></li>
+        <li><a href="#about"> About </a></li>
+        <li><a href="#contact"> Contact </a></li>
+        <i class="fa fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa fa-bars" style="text-align: end;" onclick="openmenu()"></i>
     </nav>
+
+    <div class="row" style="height: 85vh !important;">
+      <div class="col-sm-6" id="card1">
+        <div class="header-text">
+          <h1><span>Hi,</span> My name is
+            <br>
+            Natthawat Sangkarat
+          </h1>
+          <h4>Trainee </h4>
+          <h4 style="text-decoration: none;">FOR SOFT SQUARE GROUP 1999 CO. LTD </h4>
+        </div>
+      </div>
+      <div class="col-sm-6" id="card2">
+        <div class="header-text">
+          <img src="profile2.jpg" class="profile" alt="myprofile" height="150px" width="150px">
+        </div>
+      </div>
+    </div>
   </div>
-    
+  <!--- ----------About---------- -->
+  <div id="about">
+    <div class="container">
+      <div class="row1" style="height: 85vh !important;">
+        <div class="about-col-1">
+          <img src="profile.jpg" alt="" height="250px" width="150px">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>My name is Natthawat Sangkarat, Nickname Ah. <br>
+            I’m 21 years old. My birthday is on 4th march 2002.<br>
+            Now I live in khlong 6 Thanyaburi, I’m junior in Rajamangala
+            University of Technology Thanyaburi</p>
+          <div class="tab-titiles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <div class="text">
+              <span>Hardskills</span>
+              <p>Visual Studio Code
+                <br>PHP Language
+                <br>CSS Language
+              </p>
+            </div>
+            <div class="text">
+              <span>Softskills</span>
+                <p>Android Studio
+                <br>Netbeans
+                <br>Dreamweawer
+                <br>JAVA Language
+              </p>
+            </div>
+          </div>
+
+          <div class="tab-contents " id="experience">
+            <div class="text">
+              <span>2021 - 2022</span>
+              <p>Created the Mart website for sell Shoes by using
+                HTML, CSS, Bootstrap on Dreamweaver
+                <br>
+              </p>
+            </div>
+            <div class="text">
+              <span>2022</span>
+              <p>Created the @Khlong 6 Application for Advice
+                Restaurants at Khlong6 by using Java on Android
+                Studio
+                <br>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="tab-contents " id="education">
+            <div class="text">
+              <span>Bachelor's degree</span>
+              <p>Present Rajamangala University of Technology
+                Thanyaburi, Business Administration Information
+                Systems GPA : 3.63
+              </p>
+            </div>
+            <div class="text">
+              <span>Vocational Certificate</span>
+              <p>Nakhonratchasima Technical College : NTC :
+                Electrical Power GPA : 3.74
+                <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------Contact-------------->
+  <div id="contact">
+    <div class="container">
+      <div class="row1" style="height: 80vh !important;">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+
+          <p><img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" style="width:40px;height:40px;">
+            97/1 ม.8 ต.บ้านใหม่ อ.เมือง จ.นครราชสีมา 30000</p>
+            <p><img src="https://static.vecteezy.com/system/resources/previews/016/716/465/non_2x/gmail-icon-free-png.png" style="width:40px;height:40px;">
+            Sangkaratz@gmail.com</p>
+            <p><img src="https://play-lh.googleusercontent.com/izcjFaDXBzGzVHh0ZKqBEfvnghM9QQxUnGqogZzDowi8TlGtILA5sLIqbrcJ_j5KjA" style="width:40px;height:40px;">
+            098 596 5885</p>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com/ahzii.runner/" class="fa fa-facebook" id="facebook"></a>
+            <a href="https://www.instagram.com/ah.ntw/" class="fa fa-instagram"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>Copyright © Natthawat Sangkarat 2023-2024</p>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
