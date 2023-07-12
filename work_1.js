@@ -1,3 +1,27 @@
+//  " Modal "
+const showButton = document.getElementById("showDialog");
+const favDialog = document.getElementById("favDialog");
+const cancelBtn = favDialog.querySelector("#cancelBtn");
+const inputs = favDialog.querySelectorAll("input[required]");
+
+// Remove the required attribute from all input fields
+cancelBtn.addEventListener("click", () => {
+  inputs.forEach((input) => {
+    input.removeAttribute("required");
+    document.getElementById("form").reset();
+  });
+});
+
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener("click", () => {
+  favDialog.showModal();
+});
+
+
+
+
+//  " Table "
+
 let bigdata = []
 
 addData = () =>  {
@@ -24,7 +48,7 @@ addData = () =>  {
                     Delete</button>  
                     </td>
                     </tr>`
-    })                                                                                  /* สไตล์ ปุ่ม */
+    })                                                                                 
     document.getElementById('myTable').innerHTML = htmlStr   
     favDialog.close();
     document.getElementById("form").reset();

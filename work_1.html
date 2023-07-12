@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ระบบลงทะเบียน</title>
     <link rel="stylesheet" href="work_1.css">
-    <script src="work_1.js"></script>
 </head>
 <body>
-    <!-- A modal dialog containing a form -->
+    <!-- modal -->
 <dialog id="favDialog" style="width: 500px; height: 500px;">
     <form id="form">
       <p>
@@ -53,28 +52,6 @@
 
     </tbody>
   </table>
-  <output></output>
-  
-  <script>
-    const showButton = document.getElementById("showDialog");
-    const favDialog = document.getElementById("favDialog");
-    const cancelBtn = favDialog.querySelector("#cancelBtn");
-    const inputs = favDialog.querySelectorAll("input[required]");
-
-    // Remove the required attribute from all input fields
-    cancelBtn.addEventListener("click", () => {
-      inputs.forEach((input) => {
-        input.removeAttribute("required");
-        document.getElementById("form").reset();
-      });
-    });
-
-    // "Show the dialog" button opens the <dialog> modally
-    showButton.addEventListener("click", () => {
-      favDialog.showModal();
-    });
-
-    
-  </script>
+<script src="work_1.js"></script>
 </body>
 </html>
